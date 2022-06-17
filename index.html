@@ -8,6 +8,8 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -18,7 +20,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -26,13 +29,113 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p class="current-date">Today is <span id="date-time"></span>.</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+    <div class="container col-12">
+      <!-- Time block for 9am -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>09:00am</p>
+        </div>
+        <div class="description border border-white col-8 ">
+            <p> Finish project!</p>
+        </div>
+        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
+
+            <!-- Time block for 10am -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>10:00am</p>
+        </div>
+        <div class="description border border-white col-8 ">
+            <p> Finish project!</p>
+        </div>
+        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
+
+      <!-- Time block for 11am -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>11:00am</p>
+        </div>
+        <div class="description border border-white col-8 ">
+            <p> Finish project!</p>
+        </div>
+        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
+
+            <!-- Time block for 12pm -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>12:00pm</p>
+        </div>
+        <div class="description border border-white col-8 ">
+            <p> Finish project!</p>
+        </div>
+        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
+
+            <!-- Time block for 1pm -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>1:00pm</p>
+        </div>
+        <div class="description border border-white col-8 ">
+            <p> Finish project!</p>
+        </div>
+        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
+
+        <!-- Time block for 2pm -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>2:00pm</p>
+        </div>
+        <div class="description border border-white col-8 ">
+            <p> Finish project!</p>
+        </div>
+        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
+
+     <!-- Time block for 3pm -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>3:00pm</p>
+        </div>
+        <div class="description border border-white col-8 ">
+            <p> Finish project!</p>
+        </div>
+        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
+        
+
+        <!-- Time block for 4pm -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>4:00pm</p>
+        </div>
+        <div class="description border border-white col-8 ">
+            <p> Finish project!</p>
+        </div>
+        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
+
+        <!-- Time block for 5pm -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>5:00pm</p>
+        </div>
+        <div class="description border border-white col-8 ">
+            <p> Finish project!</p>
+        </div>
+        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
