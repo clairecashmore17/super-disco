@@ -32,106 +32,115 @@
       <p class="current-date">Today is <span id="date-time"></span>.</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container col-12">
-      <!-- Time block for 9am -->
+    <div class="container col-12" id="hourly-event-blocks">
+      <!-- Time block for 8am -->
+      <section class="time-block row justify-content-md-center">
+        <div class="hour col-1 ">
+            <p>08:00am</p>
+        </div>
+        <div class="description border border-white col-8 d-flex">
+            <textarea class="text-left w-100 p-3" id="8am" placeholder="click to add event in this block"></textarea>
+        </div>
+        <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+      </section>
+      <!-- Hour 9am -->
       <section class="time-block row justify-content-md-center">
         <div class="hour col-1 ">
             <p>09:00am</p>
         </div>
-        <div class="description border border-white col-8 ">
-            <p> Finish project!</p>
+        <div class="description border border-white col-8 d-flex">
+            <textarea class="text-left w-100 p-3" id="9am" placeholder="click to add event in this block"></textarea>
         </div>
-        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+        <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
       </section>
 
-            <!-- Time block for 10am -->
+         <!-- Hour 10am -->
       <section class="time-block row justify-content-md-center">
         <div class="hour col-1 ">
             <p>10:00am</p>
         </div>
-        <div class="description border border-white col-8 ">
-            <p> Finish project!</p>
+        <div class="description border border-white col-8 d-flex">
+            <textarea class="text-left w-100 p-3" id="10am" placeholder="click to add event in this block"></textarea>
         </div>
-        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+        <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
       </section>
 
-      <!-- Time block for 11am -->
-      <section class="time-block row justify-content-md-center">
-        <div class="hour col-1 ">
-            <p>11:00am</p>
-        </div>
-        <div class="description border border-white col-8 ">
-            <p> Finish project!</p>
-        </div>
-        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
-      </section>
+   <!-- Hour 11am -->
+   <section class="time-block row justify-content-md-center">
+    <div class="hour col-1 ">
+        <p>11:00am</p>
+    </div>
+    <div class="description border border-white col-8 d-flex">
+        <textarea class="text-left w-100 p-3" id="11am" placeholder="click to add event in this block"></textarea>
+    </div>
+    <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+  </section>
 
-            <!-- Time block for 12pm -->
-      <section class="time-block row justify-content-md-center">
-        <div class="hour col-1 ">
-            <p>12:00pm</p>
-        </div>
-        <div class="description border border-white col-8 ">
-            <p> Finish project!</p>
-        </div>
-        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
-      </section>
+   <!-- Hour 12pm -->
+   <section class="time-block row justify-content-md-center">
+    <div class="hour col-1 ">
+        <p>12:00pm</p>
+    </div>
+    <div class="description border border-white col-8 d-flex">
+        <textarea class="text-left w-100 p-3" id="12pm" placeholder="click to add event in this block"></textarea>
+    </div>
+    <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+  </section>
+      
+    <!-- Hour 1pm -->
+    <section class="time-block row justify-content-md-center">
+    <div class="hour col-1 ">
+        <p>01:00pm</p>
+    </div>
+    <div class="description border border-white col-8 d-flex">
+        <textarea class="text-left w-100 p-3" id="1pm" placeholder="click to add event in this block"></textarea>
+    </div>
+    <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+  </section>
 
-            <!-- Time block for 1pm -->
-      <section class="time-block row justify-content-md-center">
-        <div class="hour col-1 ">
-            <p>1:00pm</p>
-        </div>
-        <div class="description border border-white col-8 ">
-            <p> Finish project!</p>
-        </div>
-        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
-      </section>
+    <!-- Hour 2pm -->
+    <section class="time-block row justify-content-md-center">
+    <div class="hour col-1 ">
+        <p>02:00pm</p>
+    </div>
+    <div class="description border border-white col-8 d-flex">
+        <textarea class="text-left w-100 p-3" id="2pm" placeholder="click to add event in this block"></textarea>
+    </div>
+    <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+  </section>
 
-        <!-- Time block for 2pm -->
-      <section class="time-block row justify-content-md-center">
-        <div class="hour col-1 ">
-            <p>2:00pm</p>
-        </div>
-        <div class="description border border-white col-8 ">
-            <p> Finish project!</p>
-        </div>
-        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
-      </section>
+     <!-- Hour 3pm -->
+     <section class="time-block row justify-content-md-center">
+      <div class="hour col-1 ">
+          <p>03:00pm</p>
+      </div>
+      <div class="description border border-white col-8 d-flex">
+          <textarea class="text-left w-100 p-3" id="3pm" placeholder="click to add event in this block"></textarea>
+      </div>
+      <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+    </section>
 
-     <!-- Time block for 3pm -->
-      <section class="time-block row justify-content-md-center">
-        <div class="hour col-1 ">
-            <p>3:00pm</p>
-        </div>
-        <div class="description border border-white col-8 ">
-            <p> Finish project!</p>
-        </div>
-        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
-      </section>
-        
-
-        <!-- Time block for 4pm -->
-      <section class="time-block row justify-content-md-center">
-        <div class="hour col-1 ">
-            <p>4:00pm</p>
-        </div>
-        <div class="description border border-white col-8 ">
-            <p> Finish project!</p>
-        </div>
-        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
-      </section>
-
-        <!-- Time block for 5pm -->
-      <section class="time-block row justify-content-md-center">
-        <div class="hour col-1 ">
-            <p>5:00pm</p>
-        </div>
-        <div class="description border border-white col-8 ">
-            <p> Finish project!</p>
-        </div>
-        <button id="save-task" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
-      </section>
+   <!-- Hour 4pm -->
+   <section class="time-block row justify-content-md-center">
+    <div class="hour col-1 ">
+        <p>04:00pm</p>
+    </div>
+    <div class="description border border-white col-8 d-flex">
+        <textarea class="text-left w-100 p-3" id="4pm" placeholder="click to add event in this block"></textarea>
+    </div>
+    <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+  </section>
+   <!-- Hour 5pm -->
+   <section class="time-block row justify-content-md-center">
+    <div class="hour col-1 ">
+        <p>05:00pm</p>
+    </div>
+    <div class="description border border-white col-8 d-flex">
+        <textarea class="text-left w-100 p-3" id="5pm" placeholder="click to add event in this block"></textarea>
+    </div>
+    <button id="btn-save" class = "col-1 saveBtn btn-block btn-success "><span class="oi oi-lock-locked"></span></button>
+  </section>
+  
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

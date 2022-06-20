@@ -70,4 +70,10 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
+ .description-text-box{
+    border: none;
+    /* padding-top: 35px; */
+    margin: 0;
+    width: 100%;
+  }
   
