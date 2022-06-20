@@ -1,9 +1,44 @@
 // Get today's date and display on the front
 var dateToday = new Date();
-var events = {};
+var events = {
+  "9": [],
+  "10": [],
+  "11": [],
+  "12": [],
+  "13":[],
+  "14":[],
+  "15":[],
+  "16":[],
+  "17":[]
+};
 document.getElementById("date-time").innerHTML=dateToday.toDateString();
 
+//load our events if we have any
+function loadEvents() {
+  var loadedEvents = JSON.parse(localStorage.getItem("events"));
 
+  //if our storage has contents
+  if(loadedEvents){
+    events = loadedEvents;
+
+    //place into corresponding hours
+    $.each(events, function(hour,singleEvent){
+      console.log(hour);
+      var hourId = $("#" + hour)
+      //create our events
+      console.log(hourId);
+      var eventSection = hourId.find("event");
+
+      //this currently replaces all event p's with this
+      var eventP = $("textarea")
+      .addClass("description")
+      .text(singleEvent);
+
+     
+    })
+    
+  }
+}
 
 // edit the empty time block description
 $(".description").on("click", "p", function(){
@@ -18,6 +53,8 @@ $(".description").on("click", "p", function(){
     $(this).replaceWith(textInput);
     textInput.trigger("focus");
   });
+
+
 // when user clicks off screen, does not alter the written description
   $(".description").on("blur", "p", function(){
     // get the textarea's current value/text
@@ -29,22 +66,34 @@ $(".description").on("click", "p", function(){
     // As per requirements, I do not believe we need to save here.
     //************* */
     // recreate p element
-    var taskP = $("<p>")
+    var eventP = $("<p>")
     .addClass("m-1")
     .text(text);
 
     //repalce textarea with p element
-    $(this).replaceWith(taskP);
+    $(this).replaceWith(eventP);
     
   });
 
-  //Button click save events for every specific hour -- SAVES ALL, CANNOT FIGURE HOW TO SAVE INDIVIDUAL
-  $("#btn-save").click(function(){
+  //Button click save events for every specific hour 
+  $(".btn-success").click(function(){
     console.log("save button clicked");
-    //get the value from our description block in specified hours
-    var hr8am = document.getElementById("8am").value;
-    console.log(hr8am);
-    var hr9am = document.getElementById("9am").value;
-    console.log(hr9am);
+    // grab elements we desire
+    var eventText = $(this).closest(".time-block");
+    var textContent = eventText.find("textarea");
+
+    // find what time it is
+    var time = textContent.attr("id");
+    var text= textContent
+      .val()
+      .trim();
+
+      //put into our object
+      events[time] = [text];
+
+      //save to local storage
+      localStorage.setItem("events", JSON.stringify(events));
 
   })
+
+  loadEvents();
