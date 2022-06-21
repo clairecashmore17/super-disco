@@ -1,5 +1,6 @@
 // Get today's date and display on the front
 var dateToday = new Date();
+//logged in military time here so we don't have to worry about am/pm
 var events = {
   "9": [],
   "10": [],
@@ -11,6 +12,7 @@ var events = {
   "16":[],
   "17":[]
 };
+//Display the date to the spot on our page with date-time id
 document.getElementById("date-time").innerHTML=dateToday.toDateString();
 
 //load our events if we have any
@@ -23,18 +25,18 @@ function loadEvents() {
 
     //place into corresponding hours
     $.each(events, function(hour,singleEvent){
+      console.log(singleEvent);
       console.log(hour);
+      //Create the id as the hour number
       var hourId = $("#" + hour)
       //create our events
       console.log(hourId);
       var eventSection = hourId.find("event");
 
-      //this currently replaces all event p's with this
+      //this currently replaces all event p's with this, does not work correctly
       var eventP = $("textarea")
       .addClass("description")
       .text(singleEvent);
-
-     
     })
     
   }
