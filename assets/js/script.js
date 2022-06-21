@@ -2,6 +2,7 @@
 var dateToday = new Date();
 //logged in military time here so we don't have to worry about am/pm
 var events = {
+  "8":[],
   "9": [],
   "10": [],
   "11": [],
@@ -15,6 +16,41 @@ var events = {
 //Display the date to the spot on our page with date-time id
 document.getElementById("date-time").innerHTML=dateToday.toDateString();
 
+
+// function to audit time and organize into sections
+// This is taken almost directly from the TaskmasterPro assignment 
+function auditEvent() {
+  var presentHour = moment().hour();
+  console.log(presentHour);
+  // find the hour of each section
+  $("textarea").each(function(){
+    //grab the hour associated with the event through its id (military time)
+    var eventHour = parseInt($(this).attr("id"));
+    console.log(eventHour);
+
+    // determine whether that block is in the past, present, or future
+    if(eventHour < presentHour){
+      //alter the element css class to make it red
+      console.log(eventHour + " was less than " + presentHour);
+      $(this)
+        .removeClass("present-red", "future-green")
+        .addClass("past-gray");
+    }
+    else if (eventHour == presentHour) {
+      console.log(eventHour + " was equal to " + presentHour);
+      $(this)
+        .removeClass("past-gray","future-green")
+        .addClass("present-red");
+    }
+    else if( eventHour > presentHour) {
+      console.log(eventHour + " was more than " + presentHour);
+      $(this)
+      .removeClass("present-red", "past-gray")
+      .addClass("future-green")
+    }
+  })
+}
+
 //load our events if we have any
 function loadEvents() {
   var loadedEvents = JSON.parse(localStorage.getItem("events"));
@@ -25,18 +61,20 @@ function loadEvents() {
 
     //place into corresponding hours
     $.each(events, function(hour,singleEvent){
-      console.log(singleEvent);
-      console.log(hour);
+      // console.log(singleEvent);
+      // console.log(hour);
       //Create the id as the hour number
       var hourId = $("#" + hour)
       //create our events
-      console.log(hourId);
+      // console.log(hourId);
       var eventSection = hourId.find("event");
 
       //this currently replaces all event p's with this, does not work correctly
       var eventP = $("textarea")
       .addClass("description")
       .text(singleEvent);
+
+      auditEvent();
     })
     
   }
@@ -97,5 +135,5 @@ $(".description").on("click", "p", function(){
       localStorage.setItem("events", JSON.stringify(events));
 
   })
-
+  auditEvent();
   loadEvents();
