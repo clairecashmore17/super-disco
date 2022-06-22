@@ -68,13 +68,14 @@ function loadEvents() {
       //create our events
       // console.log(hourId);
       var eventSection = hourId.find("event");
+      
 
       //this currently replaces all event p's with this, does not work correctly
       var eventP = $("textarea")
       .addClass("description")
       .text(singleEvent);
 
-      auditEvent();
+      // auditEvent();
     })
     
   }
@@ -135,5 +136,5 @@ $(".description").on("click", "p", function(){
       localStorage.setItem("events", JSON.stringify(events));
 
   })
-  auditEvent();
+  // auditEvent();
   loadEvents();
