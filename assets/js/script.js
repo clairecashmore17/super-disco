@@ -92,7 +92,7 @@ $(".description").on("click", "p", function(){
 
       //put into our object
       events[time] = [text];
-
+console.log(events[time]);
       //save to local storage
       localStorage.setItem("events", JSON.stringify(events));
 
