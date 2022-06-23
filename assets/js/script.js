@@ -58,24 +58,27 @@ function loadEvents() {
   //if our storage has contents
   if(loadedEvents){
     events = loadedEvents;
-    console.log(events);
+    // console.log(events);
     //place into corresponding hours
     $.each(events, function(hour,singleEvent){
-      // console.log(singleEvent);
-      // console.log(hour);
+      console.log(singleEvent);
+      console.log(hour);
       //Create the id as the hour number
       var hourId = $("#" + hour)
-      //create our events
-      console.log(hourId);
-      var eventSection = hourId.find("textarea");
-      console.log(" event section is : " + eventSection.hour);
+      
 
-      //
-      var eventP = $("textarea")
-      .addClass("event-text")
-      .text(singleEvent);
+      // //create our events
+      // console.log(hourId);
+      // var eventSection = hourId.find('textarea');
+   
+      // console.log(" event section is : " + eventSection);
 
-      eventSection.html(eventP);
+      // //
+      // var eventP = $("textarea")
+      // .addClass("event-text")
+      // .text(singleEvent);
+
+      hourId.val(singleEvent);
 
       auditEvent();
     })
